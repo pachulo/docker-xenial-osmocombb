@@ -1,6 +1,6 @@
 # docker-xenial-osmocombb
 
-Inspired by [1]
+Inspired by [https://github.com/marcelmaatkamp/dockerfile-examples/tree/master/osmocombb/osmocombb-base][1]
 
 This docker image contains the latest build from osmocombb and its subprojects:
 
