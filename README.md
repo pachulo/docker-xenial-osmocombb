@@ -1,14 +1,19 @@
+# docker-xenial-osmocombb
+
+Inspired by [1]
+
 This docker image contains the latest build from osmocombb and its subprojects:
 
 - osmocombb
 
 Tested Docker host environments are:
 
-- Ubuntu
+- Ubuntu 16.04
 
 To run, simply use the following command-line:
 
     $ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/osmocombb /bin/bash
+    docker run --device=/dev/ttyUSB0 --rm -it --name test-osmocombb xenial-osmocombb:1.0
 
 To use the osmocombb version:
 
@@ -21,9 +26,6 @@ VShould you get an error about the driver already being claimed, exit docker and
     $ sudo update-initramfs -u
     $ sudo reboot
 
-.. and try again.
-   
-Dockerfile can be found at [https://github.com/marcelmaatkamp/dockerfile-examples/tree/master/osmocombb/osmocombb-base][1]
+.. and try again
 
   [1]: https://github.com/marcelmaatkamp/dockerfile-examples/tree/master/osmocombb/osmocombb-base
-# docker-xenial-osmocombb
