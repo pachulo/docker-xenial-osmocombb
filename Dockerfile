@@ -56,4 +56,8 @@ RUN git clone git://git.osmocom.org/osmocom-bb.git && \
         cd src && \
         PATH=/gnu-arm/install/bin:$PATH make
 
+# Fix firt mobile run
+RUN mkdir -p /root/.osmocom/bb/ && \
+        touch /root/.osmocom/bb/mobile.cfg
+
 ENTRYPOINT  ["/bin/bash"]

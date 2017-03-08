@@ -12,12 +12,17 @@ Tested Docker host environments are:
 
 To run, simply use the following command-line:
 
-    $ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb marcelmaatkamp/osmocombb /bin/bash
-    docker run --device=/dev/ttyUSB0 --rm -it --name test-osmocombb xenial-osmocombb:1.0
+    $ docker run --device=/dev/ttyUSB0 --rm -it --name test-osmocombb xenial-osmocombb:1.0
 
-To use the osmocombb version:
+To use the osmocombb version, first a firmware to the phone:
 
-    $ cd osmocom-bb/src/host/layer23/src/mobile/
+    $ cd /osmocom-bb/src/host/osmocon
+    $ ./osmocon -p /dev/ttyUSB0 -m c123xor ../../target/firmware/board/compal_e88/layer1.compalram.bin
+
+And then connect to the phone:
+
+    $ docker exec -ti test-osmocombb /bin/bash
+    $ cd /osmocom-bb/src/host/layer23/src/mobile
     $ ./mobile -i 127.0.0.1
 
 VShould you get an error about the driver already being claimed, exit docker and add a blacklist in the host environment:
