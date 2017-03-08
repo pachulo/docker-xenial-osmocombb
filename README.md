@@ -14,7 +14,7 @@ To run, simply use the following command-line:
 
     $ docker run --device=/dev/ttyUSB0 --rm -it --name test-osmocombb xenial-osmocombb:1.0
 
-To use the osmocombb version, first a firmware to the phone:
+To use the osmocombb version, first upload a firmware to the phone:
 
     $ cd /osmocom-bb/src/host/osmocon
     $ ./osmocon -p /dev/ttyUSB0 -m c123xor ../../target/firmware/board/compal_e88/layer1.compalram.bin
