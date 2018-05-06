@@ -14,7 +14,7 @@ RUN apt-get update && \
         build-essential libtool libtalloc-dev shtool autoconf automake git-core pkg-config make gcc libpcsclite-dev \
         libtool shtool automake autoconf git-core pkg-config make gcc \
         build-essential libgmp3-dev libmpfr-dev libx11-6 libx11-dev texinfo flex bison libncurses5 \
-        libncurses5-dbg libncurses5-dev libncursesw5 libncursesw5-dbg libncursesw5-dev zlibc zlib1g-dev libmpfr4 libmpc-dev \
+        libncurses5-dbg libncurses5-dev libncursesw5 libncursesw5-dbg libncursesw5-dev zlibc zlib1g-dev libmpfr4 libmpc-dev libgnutls-dev \
         git wget zip unzip telnet && \
         apt-get clean && \
         apt-get autoremove && \
